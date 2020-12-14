@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+<script>
+
+    let car;
+    var sound;
+   
+	function preload(){
+        car = loadModel('https://raw.githubusercontent.com/aqnkurm/aqnkurm.github.io/master/Car.obj');
+        sound=createAudio('https://raw.githubusercontent.com/aqnkurm/aqnkurm.github.io/master/car%2Bgeardown.mp3');
+	}
+    function setup(){
+        createCanvas(400, 400, WEBGL);
+    }
+    function draw(){
+        background(200);
+        sound.autoplay(true);
+        normalMaterial();
+        rotateX(frameCount * 0.01);
+        rotateY(frameCount * 0.01);
+        model(car);
+	}
+    
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
