@@ -11,10 +11,10 @@
         sound=createAudio('https://raw.githubusercontent.com/aqnkurm/aqnkurm.github.io/master/car%2Bgeardown.mp3');
 	}
     function setup(){
-        createCanvas(displayWidth, displayHeight, WEBGL);
+        createCanvas(1905, 960, WEBGL);
     }
     function draw(){
-        background();
+        background(200);
         sound.autoplay(true);
         normalMaterial();
         rotateX(frameCount * 0.01);
